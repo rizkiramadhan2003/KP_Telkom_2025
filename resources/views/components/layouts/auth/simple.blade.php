@@ -3,16 +3,31 @@
     <head>
         @include('partials.head')
     </head>
-    <body class="min-h-screen bg-white antialiased dark:bg-linear-to-b dark:from-neutral-950 dark:to-neutral-900">
-        <div class="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
-            <div class="flex w-full max-w-sm flex-col gap-2">
-                <a href="{{ route('home') }}" class="flex flex-col items-center gap-2 font-medium" wire:navigate>
-                    <span class="flex h-9 w-9 mb-1 items-center justify-center rounded-md">
-                        <x-app-logo-icon class="size-9 fill-current text-black dark:text-white" />
-                    </span>
-                    <span class="sr-only">{{ config('app.name', 'Laravel') }}</span>
+    <body class="min-h-screen bg-white antialiased dark:bg-neutral-950">
+        <div class="relative grid min-h-svh w-full grid-cols-1 md:grid-cols-2">
+            <div class="relative hidden flex-col justify-between bg-neutral-900 p-10 text-white md:flex">
+                <a href="{{ route('dashboard') }}" class="z-10 flex items-center gap-2 font-medium" wire:navigate>
+                    <x-app-logo-icon class="size-9 fill-current" />
+                    <span class="text-lg">{{ config('app.name', 'Laravel') }}</span>
                 </a>
-                <div class="flex flex-col gap-6">
+
+                <div class="z-10 my-auto w-full max-w-md">
+                    <h1 class="text-3xl font-bold">
+                        Welcome back!
+                    </h1>
+                    <p class="mt-2 text-neutral-400">
+                        Log in to access your dashboard and manage your fallout reports.
+                    </p>
+                </div>
+
+                <div class="z-10">
+                    &copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}. All rights reserved.
+                </div>
+
+                <x-placeholder-pattern />
+            </div>
+            <div class="bg-background flex flex-col items-center justify-center gap-6 p-6 md:p-10">
+                <div class="flex w-full max-w-sm flex-col gap-6">
                     {{ $slot }}
                 </div>
             </div>

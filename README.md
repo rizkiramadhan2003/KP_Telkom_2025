@@ -86,8 +86,6 @@ Sebelum memulai, pastikan Anda memiliki hal-hal berikut yang terinstal di sistem
     ```
     Ganti `YOUR_NGROK_HTTPS_URL` dengan URL HTTPS yang disediakan oleh Ngrok (misalnya, `https://xxxx-xxxx-xxxx-xxxx.ngrok-free.app`).
 
-    ```
-
 2.  **Gunakan Bot:**
     *   Buka bot Anda di Telegram.
     *   Kirim `/start` atau `/newreport` untuk memulai laporan fallout baru.

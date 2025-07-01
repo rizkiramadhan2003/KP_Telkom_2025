@@ -5,8 +5,8 @@ use Livewire\Volt\Volt;
 use App\Http\Controllers\TelegramController;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return redirect()->route('login');
+});
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
